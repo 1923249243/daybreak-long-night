@@ -16,6 +16,7 @@ class DaybreakRenderer{
 constructor(canvas){
  this.canvas=canvas;this.renderer=new T.WebGLRenderer({canvas,antialias:true,alpha:false,powerPreference:'high-performance'});
  this.renderer.setPixelRatio(1);this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=T.PCFSoftShadowMap;
+ this.gpu='Unavailable';try{const gl=this.renderer.getContext(),ext=gl.getExtension('WEBGL_debug_renderer_info');if(ext)this.gpu=gl.getParameter(ext.UNMASKED_RENDERER_WEBGL)||'Unavailable';}catch(_){}
  this.renderer.outputColorSpace=T.SRGBColorSpace;this.renderer.toneMapping=T.ACESFilmicToneMapping;
  this.scene=new T.Scene();this.scene.background=new T.Color(0x172a37);this.camera=new T.PerspectiveCamera(92,1,.06,460);this.camera.rotation.order='YXZ';this.scene.add(this.camera);
  this.hemi=new T.HemisphereLight(0xb1c8e2,0x30302b,1.6);this.scene.add(this.hemi);
@@ -123,7 +124,7 @@ puddle(x,z,w,d){const m=this.special(new T.MeshPhysicalMaterial({color:0x647c87,
 pine(x,z,h=6,y=this.floorY){this.cy(this.mat('wood'),x,y+h*.3,z,.12,h*.6);for(let i=0;i<3;i++){const yy=y+h*(.39+i*.2),rr=h*(.28-i*.055);this.batch('cone',this.mat('cloth',0x3b5550),x,yy,z,rr,h*.49,rr);if(this.chapter!==1)this.batch('cone',this.mat('snow'),x,yy+h*.09,z,rr*.86,h*.36,rr*.86);}}
 rails(center,a,b,y=this.floorY,alongX=false){const wood=this.mat('wood',0xa8a299),metal=this.mat('metal',0x999d97);for(let v=a;v<b;v+=1.1)this.b(wood,alongX?v:center,y+.045,alongX?center:v,alongX?.24:2.35,.13,alongX?2.35:.24);for(const side of[-1,1])this.b(metal,alongX?(a+b)/2:center+side*.76,y+.17,alongX?center+side*.76:(a+b)/2,alongX?b-a:.095,.13,alongX?.095:b-a);}
 antenna(x,z,y){const m=this.mat('metal',0x858c87);this.cy(m,x,y+6,z,.1,12);for(const dx of[-1,1])this.b(m,x+dx*.7,y+9,z,.9,.06,.1);for(let h=3;h<11;h+=2)this.b(m,x,y+h,z,.9,.05,.05);this.mesh('sphere',this.mat('plain',0x9daca9),x,y+8,z-.3,.8,.8,.13).rotation.x=.3;}
-wallSign(text,x,y,z,w=4){const c=document.createElement('canvas');c.width=768;c.height=160;const g=c.getContext('2d');g.fillStyle='#182a30';g.fillRect(0,0,768,160);g.strokeStyle='#b2a882';g.lineWidth=7;g.strokeRect(8,8,752,144);g.fillStyle='#eee5c8';g.textAlign='center';g.textBaseline='middle';g.font='500 42px "Microsoft YaHei",sans-serif';g.fillText(text,384,81,722);const tex=new T.CanvasTexture(c);tex.colorSpace=T.SRGBColorSpace;const m=new T.MeshBasicMaterial({map:tex,side:T.DoubleSide}),p=this.mesh('plane',m,x,y,z,w,w*160/768,1);p.userData.ownMaterial=true;p.castShadow=false;return p;}
+wallSign(text,x,y,z,w=4,h=w*160/768){const c=document.createElement('canvas');c.width=768;c.height=160;const g=c.getContext('2d');g.fillStyle='#182a30';g.fillRect(0,0,768,160);g.strokeStyle='#b2a882';g.lineWidth=7;g.strokeRect(8,8,752,144);g.fillStyle='#eee5c8';g.textAlign='center';g.textBaseline='middle';g.font='500 42px "Microsoft YaHei",sans-serif';g.fillText(text,384,81,722);const tex=new T.CanvasTexture(c);tex.colorSpace=T.SRGBColorSpace;const m=new T.MeshBasicMaterial({map:tex,side:T.DoubleSide}),p=this.mesh('plane',m,x,y,z,w,h,1);p.userData.ownMaterial=true;p.castShadow=false;return p;}
 obstacle(o){
  const x=o.x||0,z=o.z||0,y=o.y==null?this.floorY:o.y,w=o.w||2,d=o.d||2,h=o.h||2,type=String(o.type||'').toLowerCase();if(/void|trigger/.test(type))return;
  if(/build|house|apartment|station|shed|fort|bunker|warehouse/.test(type)){this.building(x,y,z,w,h,d,Math.round(Math.abs(x+z)));return;}
@@ -152,7 +153,7 @@ decoration(d){
  if(/barricade/.test(t)){this.obstacle({...d,type:'sandbag',h:d.h||1});return;}
  if(/antenna/.test(t)){this.antenna(x,z,y);return;}
  if(/minecart/.test(t)){const m=this.mat('metal',0x838373);this.b(m,x,y+.7,z,1.2,.8,1.6);this.b(this.mat('rock'),x,y+1.12,z,1.07,.2,1.4);for(const side of[-1,1])for(const dz of[-.5,.5])this.batch('cylinder',m,x+side*.62,y+.24,z+dz,.2,.15,.2,0,0,Math.PI/2);return;}
- if(/sign/.test(t)){this.wallSign(d.text||d.label||'撤离路线 / EVACUATION',x,y+(d.h||2.2),z,w);return;}
+ if(/sign/.test(t)){const sw=clamp(Number(d.w)||2,.6,3.5),sh=clamp(Number(d.h)||sw*160/768,.18,1),sx=this.chapter===1?-8:x,sz=this.chapter===1?21:z;this.wallSign(d.text||d.label||'撤离路线 / EVACUATION',sx,y+1.9,sz,sw,sh);this.cy(this.mat('metal',0x69716d),sx,y+.92,sz,.035,1.84);return;}
  if(/turret/.test(t)){this.turret(x,z,y);return;}
  if(/water/.test(t)){this.b(this.mat('plain',0x354b59,.15,.2),x,y-.05,z,w,.08,dd);return;}
  if(/cable/.test(t)){this.pipe(x,z,y+(d.h||3),Math.max(w,dd));return;}
@@ -238,7 +239,7 @@ render(state,dt=.016){
 }
 resize(){const w=this.canvas.clientWidth||global.innerWidth||1280,h=this.canvas.clientHeight||global.innerHeight||720;this.renderer.setSize(w,h,false);this.camera.aspect=w/h;this.camera.updateProjectionMatrix();this.weaponCamera.aspect=w/h;this.weaponCamera.updateProjectionMatrix();}
 setQuality(q){this.quality=['low','medium','high'].includes(q)?q:'medium';this.renderer.setPixelRatio(q==='high'?Math.min(global.devicePixelRatio||1,1.5):1);this.renderer.shadowMap.enabled=q!=='low';this.sun.shadow.mapSize.set(q==='high'?2048:1024,q==='high'?2048:1024);if(this.sun.shadow.map){this.sun.shadow.map.dispose();this.sun.shadow.map=null;}this.resize();}
-getInfo(){const i=this.renderer.info;return{fps:this._fps,quality:this.quality,drawCalls:this.drawCalls||0,triangles:this.triangles||0,geometries:i.memory.geometries,textures:i.memory.textures,renderer:'Three.js r'+T.REVISION,firstPerson:true,fov:92};}
+getInfo(){const i=this.renderer.info;return{fps:this._fps,quality:this.quality,gpu:this.gpu,drawCalls:this.drawCalls||0,triangles:this.triangles||0,geometries:i.memory.geometries,textures:i.memory.textures,renderer:'Three.js r'+T.REVISION,firstPerson:true,fov:92};}
 dispose(){this.disposed=true;this.disposeWorld();for(const g of Object.values(this.geometry))g.dispose();this.sky.geometry.dispose();for(const m of this.materials.values())m.dispose();for(const t of this.textures.values())t.dispose();for(const maps of Object.values(this.surfaceMaps||{}))for(const t of Object.values(maps))t.dispose();for(const m of this.owned)m.dispose();this.envSource.dispose();this.envTarget.dispose();this.renderer.dispose();}
 }
 global.DaybreakRenderer=DaybreakRenderer;if(typeof module!=='undefined'&&module.exports)module.exports={DaybreakRenderer};
