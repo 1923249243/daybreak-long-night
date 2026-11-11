@@ -90,6 +90,16 @@ loadWorld(state){
 }
 theme(id,b,cx,cz,ww,dd){
  const y=this.floorY,con=this.mat('concrete'),metal=this.mat('metal',0x8b989b),stone=this.mat('rock'),snow=this.mat('snow');
+ // Outdoor scenery continues below the boundary trees into the fogged horizon.
+ // Elevated roads, interiors and the final canyon retain their separate voids.
+ if([1,4,5,7].includes(id)){
+  const terrain=id===1?this.mat('road'):snow;
+  this.b(terrain,cx,y-.3,cz,420,.4,420);
+  if(id!==1)for(let i=0;i<18;i++){
+   const r=this.random(7080+id*101+i),angle=i*Math.PI*2/18,dist=88+r()*48,rx=17+r()*24,rz=19+r()*26,h=8+r()*(id===7?26:13);
+   this.batch('sphere',terrain,cx+Math.cos(angle)*dist,y+h*.5-.22,cz+Math.sin(angle)*dist,rx,h*.5,rz,angle);
+  }
+ }
  if(id===1||id===2){
   for(let z=b.minZ+4,n=0;z<b.maxZ+5;z+=11,n++)for(const side of[-1,1]){const x=side<0?b.minX-6:b.maxX+6,h=10+(n*7+side+1)%17;this.building(x,y,z,10,h,9,n);if(n%2===0)this.lamp(x-side*5.5,z,y);}
   for(let z=b.minZ;z<b.maxZ;z+=7)this.b(this.mat('plain',0xc0b99a),cx,y+.008,z,.12,.018,2.5);for(const side of[-1,1])this.b(con,cx+side*(ww*.5+.2),y+.09,cz,.5,.25,dd+2);
