@@ -1,0 +1,9 @@
+{
+ "name":"daybreak-long-night",
+ "version":"1.0.0",
+ "private":true,
+ "description":"白昼之前 长夜行动：八关单人第一人称3D战役",
+ "license":"MIT",
+ "engines":{"node":">=18"},
+ "scripts":{"start":"node server.cjs","test":"node --test tests/*.test.cjs","check":"node tools/check.cjs"}
+}

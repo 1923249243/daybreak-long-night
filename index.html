@@ -1,0 +1,25 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'none'"><title>白昼之前 · 长夜行动</title><link rel="stylesheet" href="style.css"></head>
+<body><main id="app"><canvas id="view" tabindex="0" aria-label="白昼之前第一人称三维战役"></canvas>
+ <div id="loading"><span class="eyebrow">八关单人第一人称战役</span><h1>白昼之前</h1><p>正在准备长夜行动……</p><div class="loading-line"></div></div>
+ <section id="hud" hidden aria-label="行动状态">
+  <div class="objective"><div class="eyebrow" id="chapter-tag"></div><h2 id="objective-text"></h2><div id="objective-detail"></div><div class="progress-track"><i id="mission-progress"></i></div></div>
+  <button id="pause-button" aria-label="暂停游戏">Ⅱ <span>暂停</span></button>
+  <div id="crosshair" aria-hidden="true"><i></i><b></b></div>
+  <div id="boss-panel" hidden><span id="boss-name">顾衡</span><div><i id="boss-health"></i></div><small id="boss-note"></small></div>
+  <div class="vitals"><span class="eyebrow" id="player-label">沈砚 / 工兵</span><strong id="health-text">100</strong><div class="health-track"><i id="health-fill"></i></div><small id="buddy-text">九号 / 同行中</small></div>
+  <div class="weapon"><span class="eyebrow" id="weapon-label">制式步枪</span><div><strong id="ammo-text">18</strong><span id="reserve-text"> / 108</span></div><small id="weapon-note">R 装填</small></div>
+  <div id="prompt" hidden><kbd>E</kbd><span></span></div>
+  <div id="dialogue" hidden role="status"><div class="dialogue-speaker"></div><p></p></div>
+  <div class="controls">WASD 移动 <b>·</b> 鼠标转向 / 左键射击 <b>·</b> E 互动 <b>·</b> R 装填 <b>·</b> Shift 奔跑 <b>·</b> Esc 暂停</div>
+ </section>
+ <div id="toast" hidden role="status"></div><div id="perf" aria-label="运行状态"></div>
+ <section id="overlay" class="overlay" aria-label="战役菜单"></section>
+ <section id="settings" class="settings-panel" hidden aria-label="游玩设置"><span class="eyebrow">游玩设置</span><h2>让这一段路更舒服</h2><p>第一人称视野 92°。没有镜头晃动、冲刺变焦或动态模糊，枪械动作与镜头分开。</p>
+  <label>声音 <input type="range" id="volume" min="0" max="100" value="35"><span id="volume-value">35%</span></label>
+  <label>清晰度 <select id="quality"><option value="low">流畅</option><option value="medium">标准</option><option value="high">清晰</option></select></label>
+  <label>鼠标灵敏度 <input type="range" id="sensitivity" min="30" max="150" value="75"><span id="sensitivity-value">75%</span></label>
+  <label class="check-label"><input type="checkbox" id="assist" checked>轻度辅助瞄准，帮助击中准星附近的敌人</label>
+  <button class="primary" id="settings-close">保存并返回</button>
+ </section>
+ <section id="error" hidden role="alert"><span class="eyebrow">场景暂时未能载入</span><h2>未能进入长夜行动</h2><p></p><button id="error-reload" class="primary">重新载入</button></section>
+</main><script src="vendor/three.min.js"></script><script src="world.js"></script><script src="game.js"></script><script src="story.js"></script><script src="audio.js"></script><script src="render.js"></script><script src="app.js"></script></body></html>

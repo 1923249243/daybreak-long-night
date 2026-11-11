@@ -1,0 +1,807 @@
+{
+  "date": "2026-11-11",
+  "method": "真实Chrome渲染；状态读取导航代理使用正常移动、射击、互动输入，章节通过可见按钮进入；逻辑按0.04秒步进，不代表人的速度",
+  "attached": true,
+  "mode": "ending",
+  "chapter": 8,
+  "stage": "depart",
+  "mission": "保留民用主桥，迎接白昼",
+  "hp": 100,
+  "ammo": 2,
+  "reserve": 168,
+  "time": 26.94499999999995,
+  "totalTicks": 5758,
+  "renderedFrames": 964,
+  "rescued": 12,
+  "stats": {
+    "shots": 96,
+    "hits": 96,
+    "kills": 40,
+    "rescued": 12,
+    "retries": 0,
+    "supplies": 3,
+    "time": 230.21499999998886,
+    "bossHits": 16,
+    "strategic": {
+      "reconDisabled": true,
+      "suppliesCut": true,
+      "buddySaved": true,
+      "airspaceOpen": true,
+      "commanderCaptured": true,
+      "civilianBridgeSafe": true
+    }
+  },
+  "boss": {
+    "hp": 1,
+    "wounded": true,
+    "captured": true
+  },
+  "progress": {
+    "completed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "unlocked": 8
+  },
+  "outcome": {
+    "buddy": "safe",
+    "buddyEvacuated": true,
+    "civilianBridgeSafe": true,
+    "militaryBridgeDestroyed": true,
+    "medicalPassed": true
+  },
+  "start": {
+    "mode": "title",
+    "chapter": 1,
+    "stage": "fixBuddy",
+    "time": 0
+  },
+  "captures": {
+    "01-briefing": {
+      "kind": "briefing",
+      "chapter": 1,
+      "stage": "fixBuddy",
+      "time": 0,
+      "file": "docs/screenshots/chapter-01-briefing.png"
+    },
+    "01-opening": {
+      "kind": "opening",
+      "chapter": 1,
+      "stage": "fixBuddy",
+      "time": 0,
+      "file": "docs/screenshots/chapter-01-opening.png"
+    },
+    "01-complete": {
+      "kind": "complete",
+      "chapter": 1,
+      "stage": "evacuate",
+      "time": 19.46500000000011,
+      "file": "docs/screenshots/chapter-01-complete.png"
+    },
+    "02-briefing": {
+      "kind": "briefing",
+      "chapter": 2,
+      "stage": "openGarage",
+      "time": 0,
+      "file": "docs/screenshots/chapter-02-briefing.png"
+    },
+    "02-opening": {
+      "kind": "opening",
+      "chapter": 2,
+      "stage": "openGarage",
+      "time": 0,
+      "file": "docs/screenshots/chapter-02-opening.png"
+    },
+    "02-complete": {
+      "kind": "complete",
+      "chapter": 2,
+      "stage": "evacuate",
+      "time": 12.825000000000113,
+      "file": "docs/screenshots/chapter-02-complete.png"
+    },
+    "03-briefing": {
+      "kind": "briefing",
+      "chapter": 3,
+      "stage": "restorePower",
+      "time": 0,
+      "file": "docs/screenshots/chapter-03-briefing.png"
+    },
+    "03-opening": {
+      "kind": "opening",
+      "chapter": 3,
+      "stage": "restorePower",
+      "time": 0,
+      "file": "docs/screenshots/chapter-03-opening.png"
+    },
+    "03-resumed": {
+      "kind": "resumed",
+      "chapter": 3,
+      "stage": "deliverA",
+      "time": 24.000000000000014,
+      "file": "docs/screenshots/chapter-03-resumed.png"
+    },
+    "03-complete": {
+      "kind": "complete",
+      "chapter": 3,
+      "stage": "evacuate",
+      "time": 56.759999999999316,
+      "file": "docs/screenshots/chapter-03-complete.png"
+    },
+    "04-briefing": {
+      "kind": "briefing",
+      "chapter": 4,
+      "stage": "getBattery",
+      "time": 0,
+      "file": "docs/screenshots/chapter-04-briefing.png"
+    },
+    "04-opening": {
+      "kind": "opening",
+      "chapter": 4,
+      "stage": "getBattery",
+      "time": 0,
+      "file": "docs/screenshots/chapter-04-opening.png"
+    },
+    "04-resumed": {
+      "kind": "resumed",
+      "chapter": 4,
+      "stage": "repairTrain",
+      "time": 24.000000000000014,
+      "file": "docs/screenshots/chapter-04-resumed.png"
+    },
+    "04-complete": {
+      "kind": "complete",
+      "chapter": 4,
+      "stage": "evacuate",
+      "time": 40.864999999999654,
+      "file": "docs/screenshots/chapter-04-complete.png"
+    },
+    "05-briefing": {
+      "kind": "briefing",
+      "chapter": 5,
+      "stage": "verifyRadio",
+      "time": 0,
+      "file": "docs/screenshots/chapter-05-briefing.png"
+    },
+    "05-opening": {
+      "kind": "opening",
+      "chapter": 5,
+      "stage": "verifyRadio",
+      "time": 0,
+      "file": "docs/screenshots/chapter-05-opening.png"
+    },
+    "05-resumed": {
+      "kind": "resumed",
+      "chapter": 5,
+      "stage": "escortEngineers",
+      "time": 24.000000000000014,
+      "file": "docs/screenshots/chapter-05-resumed.png"
+    },
+    "05-complete": {
+      "kind": "complete",
+      "chapter": 5,
+      "stage": "escortEngineers",
+      "time": 24.864999999999995,
+      "file": "docs/screenshots/chapter-05-complete.png"
+    },
+    "06-briefing": {
+      "kind": "briefing",
+      "chapter": 6,
+      "stage": "takeEquipment",
+      "time": 0,
+      "file": "docs/screenshots/chapter-06-briefing.png"
+    },
+    "06-opening": {
+      "kind": "opening",
+      "chapter": 6,
+      "stage": "takeEquipment",
+      "time": 0,
+      "file": "docs/screenshots/chapter-06-opening.png"
+    },
+    "06-complete": {
+      "kind": "complete",
+      "chapter": 6,
+      "stage": "evacuate",
+      "time": 23.025000000000034,
+      "file": "docs/screenshots/chapter-06-complete.png"
+    },
+    "07-briefing": {
+      "kind": "briefing",
+      "chapter": 7,
+      "stage": "breachFortress",
+      "time": 0,
+      "file": "docs/screenshots/chapter-07-briefing.png"
+    },
+    "07-opening": {
+      "kind": "opening",
+      "chapter": 7,
+      "stage": "breachFortress",
+      "time": 0,
+      "file": "docs/screenshots/chapter-07-opening.png"
+    },
+    "07-resumed": {
+      "kind": "resumed",
+      "chapter": 7,
+      "stage": "evacuate",
+      "time": 24.000000000000014,
+      "file": "docs/screenshots/chapter-07-resumed.png"
+    },
+    "07-complete": {
+      "kind": "complete",
+      "chapter": 7,
+      "stage": "evacuate",
+      "time": 25.464999999999982,
+      "file": "docs/screenshots/chapter-07-complete.png"
+    },
+    "08-briefing": {
+      "kind": "briefing",
+      "chapter": 8,
+      "stage": "boardTrain",
+      "time": 0,
+      "file": "docs/screenshots/chapter-08-briefing.png"
+    },
+    "08-opening": {
+      "kind": "opening",
+      "chapter": 8,
+      "stage": "boardTrain",
+      "time": 0,
+      "file": "docs/screenshots/chapter-08-opening.png"
+    },
+    "08-resumed": {
+      "kind": "resumed",
+      "chapter": 8,
+      "stage": "cutMilitaryBridge",
+      "time": 24.000000000000014,
+      "file": "docs/screenshots/chapter-08-resumed.png"
+    },
+    "08-ending": {
+      "kind": "ending",
+      "chapter": 8,
+      "stage": "depart",
+      "time": 26.94499999999995,
+      "file": "docs/screenshots/chapter-08-ending.png"
+    }
+  },
+  "uiEvents": [
+    {
+      "kind": "visible-button-click",
+      "label": "从第一关开始",
+      "chapter": 1,
+      "mode": "briefing",
+      "tick": 0
+    },
+    {
+      "kind": "visible-button-click",
+      "label": "进入雨夜旧城",
+      "chapter": 1,
+      "mode": "playing",
+      "tick": 0
+    },
+    {
+      "kind": "visible-button-click",
+      "label": "进入下一关",
+      "chapter": 2,
+      "mode": "briefing",
+      "tick": 487
+    },
+    {
+      "kind": "visible-button-click",
+      "label": "进入高架城区",
+      "chapter": 2,
+      "mode": "playing",
+      "tick": 487
+    },
+    {
+      "kind": "visible-button-click",
+      "label": "进入下一关",
+      "chapter": 3,
+      "mode": "briefing",
+      "tick": 808
+    },
+    {
+      "kind": "visible-button-click",
+      "label": "进入地下医院",
+      "chapter": 3,
+      "mode": "playing",
+      "tick": 808
+    },
+    {
+      "kind": "visible-button-click",
+      "label": "进入下一关",
+      "chapter": 4,
+      "mode": "briefing",
+      "tick": 2227
+    },
+    {
+      "kind": "visible-button-click",
+      "label": "进入雪地站场",
+      "chapter": 4,
+      "mode": "playing",
+      "tick": 2227
+    },
+    {
+      "kind": "visible-button-click",
+      "label": "进入下一关",
+      "chapter": 5,
+      "mode": "briefing",
+      "tick": 3249
+    },
+    {
+      "kind": "visible-button-click",
+      "label": "进入山林公路",
+      "chapter": 5,
+      "mode": "playing",
+      "tick": 3249
+    },
+    {
+      "kind": "visible-button-click",
+      "label": "进入下一关",
+      "chapter": 6,
+      "mode": "briefing",
+      "tick": 3871
+    },
+    {
+      "kind": "visible-button-click",
+      "label": "进入地下矿井",
+      "chapter": 6,
+      "mode": "playing",
+      "tick": 3871
+    },
+    {
+      "kind": "visible-button-click",
+      "label": "进入下一关",
+      "chapter": 7,
+      "mode": "briefing",
+      "tick": 4447
+    },
+    {
+      "kind": "visible-button-click",
+      "label": "进入山巅要塞",
+      "chapter": 7,
+      "mode": "playing",
+      "tick": 4447
+    },
+    {
+      "kind": "visible-button-click",
+      "label": "进入下一关",
+      "chapter": 8,
+      "mode": "briefing",
+      "tick": 5084
+    },
+    {
+      "kind": "visible-button-click",
+      "label": "进入军列与双桥",
+      "chapter": 8,
+      "mode": "playing",
+      "tick": 5084
+    }
+  ],
+  "bossDamage": [
+    {
+      "chapter": 7,
+      "type": "boss-hp",
+      "before": 156,
+      "after": 130,
+      "tick": 5007
+    },
+    {
+      "chapter": 7,
+      "type": "boss-hp",
+      "before": 130,
+      "after": 104,
+      "tick": 5011
+    },
+    {
+      "chapter": 7,
+      "type": "boss-hp",
+      "before": 104,
+      "after": 78,
+      "tick": 5015
+    },
+    {
+      "chapter": 7,
+      "type": "boss-hp",
+      "before": 78,
+      "after": 52,
+      "tick": 5019
+    },
+    {
+      "chapter": 7,
+      "type": "boss-hp",
+      "before": 52,
+      "after": 26,
+      "tick": 5023
+    },
+    {
+      "chapter": 7,
+      "type": "boss-hp",
+      "before": 26,
+      "after": 1,
+      "tick": 5027
+    },
+    {
+      "chapter": 8,
+      "type": "boss-hp",
+      "before": 260,
+      "after": 234,
+      "tick": 5271
+    },
+    {
+      "chapter": 8,
+      "type": "boss-hp",
+      "before": 234,
+      "after": 208,
+      "tick": 5275
+    },
+    {
+      "chapter": 8,
+      "type": "boss-hp",
+      "before": 208,
+      "after": 182,
+      "tick": 5279
+    },
+    {
+      "chapter": 8,
+      "type": "boss-hp",
+      "before": 182,
+      "after": 156,
+      "tick": 5283
+    },
+    {
+      "chapter": 8,
+      "type": "boss-hp",
+      "before": 156,
+      "after": 130,
+      "tick": 5295
+    },
+    {
+      "chapter": 8,
+      "type": "boss-hp",
+      "before": 130,
+      "after": 104,
+      "tick": 5299
+    },
+    {
+      "chapter": 8,
+      "type": "boss-hp",
+      "before": 104,
+      "after": 78,
+      "tick": 5303
+    },
+    {
+      "chapter": 8,
+      "type": "boss-hp",
+      "before": 78,
+      "after": 52,
+      "tick": 5315
+    },
+    {
+      "chapter": 8,
+      "type": "boss-hp",
+      "before": 52,
+      "after": 26,
+      "tick": 5319
+    },
+    {
+      "chapter": 8,
+      "type": "boss-hp",
+      "before": 26,
+      "after": 1,
+      "tick": 5323
+    }
+  ],
+  "stageTrace": [
+    {
+      "chapter": 1,
+      "stage": "fixBuddy",
+      "label": "修好维修机器人九号",
+      "tick": 0
+    },
+    {
+      "chapter": 1,
+      "stage": "rescueDoctor",
+      "label": "与九号打开入口，救出林夏",
+      "tick": 62
+    },
+    {
+      "chapter": 1,
+      "stage": "holdStreet",
+      "label": "护送林夏，守住后街",
+      "tick": 214
+    },
+    {
+      "chapter": 1,
+      "stage": "evacuate",
+      "label": "小队撤出街口",
+      "tick": 467
+    },
+    {
+      "chapter": 2,
+      "stage": "openGarage",
+      "label": "让九号撑开停车楼卷帘门",
+      "tick": 487
+    },
+    {
+      "chapter": 2,
+      "stage": "clearRecon",
+      "label": "击退侦察车护卫",
+      "tick": 574
+    },
+    {
+      "chapter": 2,
+      "stage": "captureRecon",
+      "label": "夺取侦察车，关闭无人侦察",
+      "tick": 697
+    },
+    {
+      "chapter": 2,
+      "stage": "evacuate",
+      "label": "前往地下医院",
+      "tick": 758
+    },
+    {
+      "chapter": 3,
+      "stage": "restorePower",
+      "label": "恢复医院应急照明",
+      "tick": 808
+    },
+    {
+      "chapter": 3,
+      "stage": "patientA",
+      "label": "抬起第一组四人担架",
+      "tick": 886
+    },
+    {
+      "chapter": 3,
+      "stage": "deliverA",
+      "label": "将第一组四人送至出口",
+      "tick": 1079
+    },
+    {
+      "chapter": 3,
+      "stage": "patientB",
+      "label": "抬起第二组四人担架",
+      "tick": 1447
+    },
+    {
+      "chapter": 3,
+      "stage": "deliverB",
+      "label": "将第二组四人送至出口",
+      "tick": 1583
+    },
+    {
+      "chapter": 3,
+      "stage": "patientC",
+      "label": "抬起最后四人的担架",
+      "tick": 1855
+    },
+    {
+      "chapter": 3,
+      "stage": "deliverC",
+      "label": "把最后四人送往梁肃接应区",
+      "tick": 1951
+    },
+    {
+      "chapter": 3,
+      "stage": "freeBuddy",
+      "label": "协助九号离开坍塌入口",
+      "tick": 2127
+    },
+    {
+      "chapter": 3,
+      "stage": "evacuate",
+      "label": "十二人到齐，前往机修库",
+      "tick": 2198
+    },
+    {
+      "chapter": 4,
+      "stage": "getBattery",
+      "label": "搬运医疗列车启动电池",
+      "tick": 2227
+    },
+    {
+      "chapter": 4,
+      "stage": "installBattery",
+      "label": "把启动电池送入机组",
+      "tick": 2343
+    },
+    {
+      "chapter": 4,
+      "stage": "repairTrain",
+      "label": "保护九号抢修医疗列车",
+      "tick": 2743
+    },
+    {
+      "chapter": 4,
+      "stage": "cutSupplies",
+      "label": "夺下军列专用补给侧线",
+      "tick": 2992
+    },
+    {
+      "chapter": 4,
+      "stage": "seizeSupplies",
+      "label": "改变道岔，截断长夜号补给",
+      "tick": 3065
+    },
+    {
+      "chapter": 4,
+      "stage": "evacuate",
+      "label": "掩护医疗列车进入隧道",
+      "tick": 3142
+    },
+    {
+      "chapter": 5,
+      "stage": "verifyRadio",
+      "label": "梁肃：核实电台里的旧识别口令",
+      "tick": 3249
+    },
+    {
+      "chapter": 5,
+      "stage": "ambush",
+      "label": "伏击提前发动！保护幸存工兵",
+      "tick": 3302
+    },
+    {
+      "chapter": 5,
+      "stage": "rescueEngineer",
+      "label": "带受伤工兵离开公路",
+      "tick": 3501
+    },
+    {
+      "chapter": 5,
+      "stage": "safeEngineer",
+      "label": "把工兵转移到背坡",
+      "tick": 3583
+    },
+    {
+      "chapter": 5,
+      "stage": "rallyEngineers",
+      "label": "集结工兵，改走排水涵道",
+      "tick": 3655
+    },
+    {
+      "chapter": 5,
+      "stage": "escortEngineers",
+      "label": "护送幸存工兵撤出伏击区",
+      "tick": 3742
+    },
+    {
+      "chapter": 6,
+      "stage": "takeEquipment",
+      "label": "搬运工兵器材",
+      "tick": 3871
+    },
+    {
+      "chapter": 6,
+      "stage": "loadEquipment",
+      "label": "把器材装上矿车",
+      "tick": 3911
+    },
+    {
+      "chapter": 6,
+      "stage": "drainMine",
+      "label": "启动排水泵，恢复升降井通路",
+      "tick": 3959
+    },
+    {
+      "chapter": 6,
+      "stage": "holdMineExit",
+      "label": "保护工兵打开要塞维修廊",
+      "tick": 4118
+    },
+    {
+      "chapter": 6,
+      "stage": "freeBuddy",
+      "label": "救出九号，拆掉彻底损坏的左臂",
+      "tick": 4382
+    },
+    {
+      "chapter": 6,
+      "stage": "evacuate",
+      "label": "带九号进入要塞维修层",
+      "tick": 4430
+    },
+    {
+      "chapter": 7,
+      "stage": "breachFortress",
+      "label": "从维修层突破火控大厅",
+      "tick": 4447
+    },
+    {
+      "chapter": 7,
+      "stage": "captureAirControl",
+      "label": "夺取山口防空指挥设备",
+      "tick": 4534
+    },
+    {
+      "chapter": 7,
+      "stage": "holdAirspace",
+      "label": "保护工兵切断防空火控",
+      "tick": 4654
+    },
+    {
+      "chapter": 7,
+      "stage": "transmitPositions",
+      "label": "传回阵地坐标，开放救援空域",
+      "tick": 4903
+    },
+    {
+      "chapter": 7,
+      "stage": "woundCommander",
+      "label": "顾衡亲临反扑，击伤并逼退他",
+      "tick": 4998
+    },
+    {
+      "chapter": 7,
+      "stage": "evacuate",
+      "label": "从要塞站台登上长夜号",
+      "tick": 5027
+    },
+    {
+      "chapter": 8,
+      "stage": "boardTrain",
+      "label": "打开护卫车通路",
+      "tick": 5084
+    },
+    {
+      "chapter": 8,
+      "stage": "clearGun",
+      "label": "击退炮组，夺下重炮车",
+      "tick": 5134
+    },
+    {
+      "chapter": 8,
+      "stage": "disableGun",
+      "label": "切断本地击发，让医疗列车通过",
+      "tick": 5210
+    },
+    {
+      "chapter": 8,
+      "stage": "defeatCommander",
+      "label": "攻入指挥车，击败顾衡",
+      "tick": 5270
+    },
+    {
+      "chapter": 8,
+      "stage": "captureCommander",
+      "label": "缴械并活捉顾衡",
+      "tick": 5323
+    },
+    {
+      "chapter": 8,
+      "stage": "shutCommand",
+      "label": "关闭军列指挥电源",
+      "tick": 5398
+    },
+    {
+      "chapter": 8,
+      "stage": "carryBuddy",
+      "label": "背起损伤的九号，一起离开",
+      "tick": 5438
+    },
+    {
+      "chapter": 8,
+      "stage": "evacuateBuddy",
+      "label": "带九号撤到民用主桥安全桥头",
+      "tick": 5479
+    },
+    {
+      "chapter": 8,
+      "stage": "cutMilitaryBridge",
+      "label": "确认全员到齐，炸断军用支桥",
+      "tick": 5631
+    }
+  ],
+  "errors": [],
+  "validation": {
+    "pass": true,
+    "failures": [],
+    "completeRun": true,
+    "missingOpenings": []
+  }
+}

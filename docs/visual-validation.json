@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-11",
+  "refreshContinuesEnding": true,
+  "maps": [
+    {
+      "chapter": 1,
+      "info": {
+        "fps": 128,
+        "quality": "low",
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Laptop GPU (0x00002D58) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "drawCalls": 461,
+        "triangles": 78168,
+        "geometries": 8,
+        "textures": 18,
+        "renderer": "Three.js r180",
+        "firstPerson": true,
+        "fov": 92
+      }
+    },
+    {
+      "chapter": 2,
+      "info": {
+        "fps": 128,
+        "quality": "low",
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Laptop GPU (0x00002D58) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "drawCalls": 294,
+        "triangles": 117876,
+        "geometries": 7,
+        "textures": 18,
+        "renderer": "Three.js r180",
+        "firstPerson": true,
+        "fov": 92
+      }
+    },
+    {
+      "chapter": 3,
+      "info": {
+        "fps": 163,
+        "quality": "low",
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Laptop GPU (0x00002D58) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "drawCalls": 249,
+        "triangles": 10658,
+        "geometries": 7,
+        "textures": 20,
+        "renderer": "Three.js r180",
+        "firstPerson": true,
+        "fov": 92
+      }
+    },
+    {
+      "chapter": 4,
+      "info": {
+        "fps": 155,
+        "quality": "low",
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Laptop GPU (0x00002D58) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "drawCalls": 145,
+        "triangles": 17112,
+        "geometries": 8,
+        "textures": 20,
+        "renderer": "Three.js r180",
+        "firstPerson": true,
+        "fov": 92
+      }
+    },
+    {
+      "chapter": 5,
+      "info": {
+        "fps": 155,
+        "quality": "low",
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Laptop GPU (0x00002D58) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "drawCalls": 275,
+        "triangles": 34286,
+        "geometries": 8,
+        "textures": 21,
+        "renderer": "Three.js r180",
+        "firstPerson": true,
+        "fov": 92
+      }
+    },
+    {
+      "chapter": 6,
+      "info": {
+        "fps": 155,
+        "quality": "low",
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Laptop GPU (0x00002D58) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "drawCalls": 277,
+        "triangles": 12698,
+        "geometries": 7,
+        "textures": 21,
+        "renderer": "Three.js r180",
+        "firstPerson": true,
+        "fov": 92
+      }
+    },
+    {
+      "chapter": 7,
+      "info": {
+        "fps": 162,
+        "quality": "low",
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Laptop GPU (0x00002D58) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "drawCalls": 292,
+        "triangles": 60264,
+        "geometries": 8,
+        "textures": 20,
+        "renderer": "Three.js r180",
+        "firstPerson": true,
+        "fov": 92
+      }
+    },
+    {
+      "chapter": 8,
+      "info": {
+        "fps": 162,
+        "quality": "low",
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Laptop GPU (0x00002D58) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "drawCalls": 452,
+        "triangles": 14938,
+        "geometries": 7,
+        "textures": 21,
+        "renderer": "Three.js r180",
+        "firstPerson": true,
+        "fov": 92
+      }
+    }
+  ],
+  "errors": [],
+  "narrowEnding": {
+    "horizontalOverflow": false,
+    "cardOverflow": false,
+    "buttons": [
+      "重温第一关",
+      "章节选择"
+    ]
+  },
+  "narrowMenu": {
+    "horizontalOverflow": false,
+    "buttons": 8
+  },
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+}
