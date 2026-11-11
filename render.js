@@ -153,7 +153,7 @@ decoration(d){
  if(/barricade/.test(t)){this.obstacle({...d,type:'sandbag',h:d.h||1});return;}
  if(/antenna/.test(t)){this.antenna(x,z,y);return;}
  if(/minecart/.test(t)){const m=this.mat('metal',0x838373);this.b(m,x,y+.7,z,1.2,.8,1.6);this.b(this.mat('rock'),x,y+1.12,z,1.07,.2,1.4);for(const side of[-1,1])for(const dz of[-.5,.5])this.batch('cylinder',m,x+side*.62,y+.24,z+dz,.2,.15,.2,0,0,Math.PI/2);return;}
- if(/sign/.test(t)){const sw=clamp(Number(d.w)||2,.6,3.5),sh=clamp(Number(d.h)||sw*160/768,.18,1),sx=this.chapter===1?-8:x,sz=this.chapter===1?21:z;this.wallSign(d.text||d.label||'撤离路线 / EVACUATION',sx,y+1.9,sz,sw,sh);this.cy(this.mat('metal',0x69716d),sx,y+.92,sz,.035,1.84);return;}
+ if(/sign/.test(t)){const sw=clamp(Number(d.w)||2,.6,3.5),sh=clamp(Number(d.h)||sw*160/768,.18,1);this.wallSign(d.text||d.label||'撤离路线 / EVACUATION',x,y+1.9,z,sw,sh);this.cy(this.mat('metal',0x69716d),x,y+.92,z,.035,1.84);return;}
  if(/turret/.test(t)){this.turret(x,z,y);return;}
  if(/water/.test(t)){this.b(this.mat('plain',0x354b59,.15,.2),x,y-.05,z,w,.08,dd);return;}
  if(/cable/.test(t)){this.pipe(x,z,y+(d.h||3),Math.max(w,dd));return;}
