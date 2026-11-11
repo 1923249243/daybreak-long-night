@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-11",
+  "version": "1.0.1",
+  "scope": "Controlled target fixture; actual browser mouse firing, existing frontend callback and WebAudio output",
+  "ammo": 23,
+  "targetHp": 13,
+  "hitMarker": true,
+  "calls": [
+    "shot",
+    "hit"
+  ],
+  "audioContext": "running",
+  "audioPeak": 0.036017823964357376,
+  "errors": [],
+  "before": {
+    "ammo": 24,
+    "hp": 52
+  }
+}

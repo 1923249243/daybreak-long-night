@@ -61,6 +61,8 @@ npm test
 
 浏览器实测和验收范围见 [docs/VALIDATION.md](docs/VALIDATION.md)。引擎接口见 [ARCHITECTURE.md](ARCHITECTURE.md)。无需构建步骤；修改源文件后刷新页面即可。
 
+v1.0.1修复了既有战斗音效与准星命中确认未被触发的问题，新增三个反馈专项。对COD战役录像及开发者讲解的有限研究、观察与推断见 [docs/COD_STUDY.md](docs/COD_STUDY.md)；这次没有增加新玩法系统。
+
 ## 开源许可
 
 本项目原创代码、故事、程序生成模型与合成音效采用 [MIT](LICENSE) 许可。Three.js r180 同为 MIT；Poly Haven 的砖墙、混凝土和柏油路面贴图采用 CC0。详情与校验值见 [第三方说明](THIRD_PARTY_NOTICES.md) 和 [素材清单](assets/manifest.json)。
