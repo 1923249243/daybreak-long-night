@@ -169,7 +169,10 @@ bridge(d,type){
 }
 platformTrain(x,z,y,yaw=0,kind='armored'){
  const g=new T.Group();g.position.set(x,y,z);g.rotation.y=yaw;this.root.add(g);const shell=this.mat('metal',kind==='medical'?0xc4d3ca:0x63706a),dark=this.mat('metal',0x363e3d),glass=this.mat('plain',0x25424b,.21,.3);
- if(this.chapter===8&&kind==='armored'){
+ if(this.chapter===1&&kind==='armored'){
+  // The opening commander stands on this original open command platform.
+  for(let zz=-4;zz<=7;zz+=10.5){this.box(dark,0,-.5,zz,3.3,2.7,9.8,g);this.box(shell,0,.87,zz,3.6,.25,10,g);for(const s of[-1,1]){this.box(shell,s*1.71,1.06,zz,.15,.3,9.7,g);for(const dz of[-3.4,3.4])this.mesh('cylinder',dark,s*1.3,-1.8,zz+dz,.48,.22,.48,g).rotation.z=Math.PI/2;}}
+ }else if(this.chapter===8&&kind==='armored'){
   for(let zz=-24;zz<=20;zz+=10){this.box(dark,0,-.65,zz,8.4,.6,9.6,g);this.box(shell,0,-.14,zz,8.6,.25,9.8,g);for(const s of[-1,1]){this.box(shell,s*4.1,.57,zz,.22,1.15,9.2,g);this.box(dark,s*3.2,-.72,zz-3.3,.4,.85,1.5,g);this.box(dark,s*3.2,-.72,zz+3.3,.4,.85,1.5,g);for(let j=0;j<3;j++)this.box(dark,s*4.22,.6,zz-3+j*3,.02,.5,1.1,g);}}
  }else for(let c=0;c<(kind==='medical'?3:2);c++){
   const zz=c*10.6;this.box(dark,0,.46,zz,3,.45,9.9,g);this.box(shell,0,1.92,zz,2.9,2.45,9.8,g);this.box(shell,0,3.17,zz,3.02,.22,10.05,g);
